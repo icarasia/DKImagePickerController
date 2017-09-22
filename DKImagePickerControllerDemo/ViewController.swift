@@ -20,6 +20,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 	func showImagePicker() {
 		pickerController.defaultSelectedAssets = self.assets
         pickerController.maxSelectableCount = 3
+        pickerController.maxSelectedMessageTitle = "Maximum images"
+        pickerController.maxSelectedMessage = "You can select %@ photos"
         pickerController.tickBackgroundColor = .red
         
         pickerController.didCancel = { ()

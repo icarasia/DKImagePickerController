@@ -138,9 +138,6 @@ open class DKImagePickerController : UINavigationController {
     /// Limits the maximum number of objects returned in the fetch result, a value of 0 means no limit.
     public var fetchLimit = 0
     
-    /// Allow user to show ticks at cells
-    public var shouldUseTick = false
-    
     public var tickBackgroundColor: Color = .red {
         didSet {
             getImageManager().tickBackgroundColor = tickBackgroundColor
