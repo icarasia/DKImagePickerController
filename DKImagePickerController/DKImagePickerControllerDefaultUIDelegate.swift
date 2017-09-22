@@ -91,9 +91,9 @@ open class DKImagePickerControllerDefaultUIDelegate: NSObject, DKImagePickerCont
         
         let formattedMaxSelectableCount = nF.string(from: NSNumber(value: imagePickerController.maxSelectableCount))
         
-        let alert = UIAlertController(title: DKImageLocalizedStringWithKey("maxLimitReached"), message: nil, preferredStyle: .alert)
+        let alert = UIAlertController(title: imagePickerController.maxSelectedMessageTitle ?? DKImageLocalizedStringWithKey("maxLimitReached"), message: nil, preferredStyle: .alert)
         
-        alert.message = String(format: DKImageLocalizedStringWithKey("maxLimitReachedMessage"), formattedMaxSelectableCount ?? imagePickerController.maxSelectableCount)
+        alert.message = String(format: imagePickerController.maxSelectedMessage ?? DKImageLocalizedStringWithKey("maxLimitReachedMessage"), formattedMaxSelectableCount ?? imagePickerController.maxSelectableCount)
         
         alert.addAction(UIAlertAction(title: DKImageLocalizedStringWithKey("ok"), style: .cancel) { _ in })
         
