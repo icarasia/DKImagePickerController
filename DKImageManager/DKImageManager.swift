@@ -42,6 +42,10 @@ public func getImageManager() -> DKImageManager {
 	return DKImageManager.sharedInstance
 }
 
+public enum Color {
+    case red, blue
+}
+
 public class DKImageManager: DKBaseManager {
 	
 	public class func checkPhotoPermission(_ handler: @escaping (_ granted: Bool) -> Void) {
@@ -79,6 +83,8 @@ public class DKImageManager: DKBaseManager {
 	}()
 	
 	public var autoDownloadWhenAssetIsInCloud = true
+    
+    public var tickBackgroundColor: Color = .blue
     
     private var _groupDataManager: DKGroupDataManager?
     

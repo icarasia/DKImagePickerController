@@ -138,6 +138,21 @@ open class DKImagePickerController : UINavigationController {
     /// Limits the maximum number of objects returned in the fetch result, a value of 0 means no limit.
     public var fetchLimit = 0
     
+    /// Allow user to show ticks at cells
+    public var shouldUseTick = false
+    
+    public var tickBackgroundColor: Color = .red {
+        didSet {
+            getImageManager().tickBackgroundColor = tickBackgroundColor
+        }
+    }
+    
+    /// The message title displayed in the alert dialog when reached limit
+    public var maxSelectedMessageTitle: String?
+    
+    /// The message displayed in the alert dialog when reached limit
+    public var maxSelectedMessage: String?
+    
     /// The types of PHAssetCollection to display in the picker.
     public var assetGroupTypes: [PHAssetCollectionSubtype] = [
         .smartAlbumUserLibrary,

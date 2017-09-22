@@ -36,7 +36,7 @@ class DKAssetGroupDetailImageCell: DKAssetGroupDetailBaseCell {
     class DKImageCheckView: UIView {
         
         internal lazy var checkImageView: UIImageView = {
-            let imageView = UIImageView(image: DKImageResource.checkedImage().withRenderingMode(.alwaysTemplate))
+            let imageView = UIImageView(image: DKImageResource.tickImage(for: getImageManager().tickBackgroundColor))
             return imageView
         }()
         
@@ -51,17 +51,15 @@ class DKAssetGroupDetailImageCell: DKAssetGroupDetailBaseCell {
             super.init(frame: frame)
             
             self.addSubview(checkImageView)
-            self.addSubview(checkLabel)
         }
         
         required init?(coder aDecoder: NSCoder) {
             fatalError("init(coder:) has not been implemented")
         }
-        
         override func layoutSubviews() {
             super.layoutSubviews()
             
-            self.checkImageView.frame = self.bounds
+            self.checkImageView.frame = CGRect(x: frame.size.width - 25, y: frame.size.height - 25, width: 25, height: 25)
             self.checkLabel.frame = CGRect(x: 0, y: 5, width: self.bounds.width - 5, height: 20)
         }
         

@@ -19,6 +19,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
 	func showImagePicker() {
 		pickerController.defaultSelectedAssets = self.assets
+        pickerController.maxSelectableCount = 3
+        pickerController.tickBackgroundColor = .red
         
         pickerController.didCancel = { ()
             print("didCancel")

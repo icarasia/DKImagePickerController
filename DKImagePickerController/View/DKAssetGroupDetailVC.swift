@@ -25,7 +25,7 @@ private extension UICollectionView {
 }
 
 // Show all images in the asset group
-open class DKAssetGroupDetailVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, DKGroupDataManagerObserver {
+open class DKAssetGroupDetailVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, DKGroupDataManagerObserver {
     	
     public lazy var selectGroupButton: UIButton = {
         let button = UIButton()
@@ -346,6 +346,15 @@ open class DKAssetGroupDetailVC: UIViewController, UICollectionViewDelegate, UIC
 			
 			self.imagePickerController.deselectImage(removedAsset)
 		}
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout
+        let totalSpace = flowLayout.sectionInset.left
+            + flowLayout.sectionInset.right
+            + (flowLayout.minimumInteritemSpacing * CGFloat(4 - 1))
+        let size = Int((collectionView.bounds.width - totalSpace) / CGFloat(4))
+        return CGSize(width: size, height: size)
     }
     
     public func scrollViewDidScroll(_ scrollView: UIScrollView) {

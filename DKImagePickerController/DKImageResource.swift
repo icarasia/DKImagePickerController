@@ -40,6 +40,17 @@ public class DKImageResource {
         return imageForResource("tick_blue")
     }
     
+    class func redTickImage() -> UIImage {
+        return imageForResource("tick_red")
+    }
+    
+    class func tickImage(for color: Color) -> UIImage {
+        switch color {
+        case .blue: return blueTickImage()
+        case .red: return redTickImage()
+        }
+    }
+    
     class func cameraImage() -> UIImage {
         return imageForResource("camera")
     }
