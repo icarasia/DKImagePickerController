@@ -8,7 +8,7 @@
 //  Released under an MIT license: http://opensource.org/licenses/MIT
 //
 
-"select" = "Pilih(%ld)";
+"select" = "Pilih(%@)";
 
 "permissionCamera" = "Izinkan Akes Kamera";
 
@@ -28,4 +28,4 @@
 
 "maxLimitReached" = "Maksimal Gambar";
 
-"maxLimitReachedMessage" = "Anda dapat menambahkan maksimal dari %ld Gambar";
+"maxLimitReachedMessage" = "Anda dapat menambahkan maksimal dari %@ Gambar";
