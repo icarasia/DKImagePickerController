@@ -205,10 +205,12 @@ public class DKGroupDataManager: DKBaseManager, PHPhotoLibraryChangeObserver {
             self.fetchGroups(assetGroupTypes: assetGroupTypes, block: { (collection) in
                 if (self.groups![collection.localIdentifier] == nil) {
                     let assetGroup = self.makeDKAssetGroup(with: collection)
-                    self.groups![assetGroup.groupId] = assetGroup
-                    self.groupIds!.append(assetGroup.groupId)
-                    
-                    insertedGroupIds.append(assetGroup.groupId)
+                    if self.showsEmptyAlbums || assetGroup.totalCount > 0 {
+                        self.groups![assetGroup.groupId] = assetGroup
+                        self.groupIds!.append(assetGroup.groupId)
+                        
+                        insertedGroupIds.append(assetGroup.groupId)
+                    }
                 }
             })
             
