@@ -50,7 +50,7 @@ class DKAssetGroupCell: UITableViewCell {
     var customSelectedBackgroundView: UIView = {
         let selectedBackgroundView = UIView()
 
-        let selectedFlag = UIImageView(image: DKImageResource.blueTickImage())
+        let selectedFlag = UIImageView(image: DKImageResource.tickImage(for: getImageManager().tickBackgroundColor))
         selectedFlag.frame = CGRect(x: selectedBackgroundView.bounds.width - selectedFlag.bounds.width - 20,
                                     y: (selectedBackgroundView.bounds.width - selectedFlag.bounds.width) / 2,
                                     width: selectedFlag.bounds.width, height: selectedFlag.bounds.height)
