@@ -38,7 +38,7 @@ open class DKImagePickerControllerDefaultUIDelegate: NSObject, DKImagePickerCont
             
             button.setTitle(String(format: DKImageLocalizedStringWithKey("select"), formattedSelectableCount ?? self.imagePickerController.selectedAssets.count), for: .normal)
         } else {
-            button.setTitle(DKImageLocalizedStringWithKey("done"), for: .normal)
+            button.setTitle("", for: .normal)
         }
         
         button.sizeToFit()
