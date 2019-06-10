@@ -365,7 +365,7 @@ open class DKImagePickerController : UINavigationController {
         let didCancel = { [unowned self] () in
             if self.sourceType == .camera {
                 self.dismissCamera()
-                self.dismiss()
+                self.dismissViewController()
             } else {
                 self.dismissCamera()
             }
@@ -445,13 +445,13 @@ open class DKImagePickerController : UINavigationController {
         }
     }
     
-    open func dismiss() {
+    @objc func dismissViewController() {
         self.presentingViewController?.dismiss(animated: true, completion: {
             self.didCancel?()
         })
     }
     
-    open func done() {
+    @objc open func done() {
         if self.selectedAssets.count > 0 {
             self.presentingViewController?.dismiss(animated: true, completion: {
                 self.didSelectAssets?(self.selectedAssets)
@@ -486,8 +486,8 @@ open class DKImagePickerController : UINavigationController {
         }
         
         var imageData = data
-        if let image = image {
-            imageData = UIImageJPEGRepresentation(image, 1)!
+        if let image = image, let jpegData = image.jpegData(compressionQuality: 1) {
+            imageData = jpegData
         }
         
         if #available(iOS 9.0, *) {

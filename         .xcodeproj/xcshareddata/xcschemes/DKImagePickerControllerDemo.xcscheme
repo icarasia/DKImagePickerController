@@ -17,7 +17,7 @@
                BlueprintIdentifier = "9C35CBFE19DBB00700557269"
                BuildableName = "DKImagePickerControllerDemo.app"
                BlueprintName = "DKImagePickerControllerDemo"
-               ReferencedContainer = "container:DKImagePickerControllerDemo.xcodeproj">
+               ReferencedContainer = "container:        .xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -31,7 +31,7 @@
                BlueprintIdentifier = "9CF72B101B8F073400238B9A"
                BuildableName = "DKImagePickerControllerDemoTests.xctest"
                BlueprintName = "DKImagePickerControllerDemoTests"
-               ReferencedContainer = "container:DKImagePickerControllerDemo.xcodeproj">
+               ReferencedContainer = "container:        .xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -49,7 +49,7 @@
                BlueprintIdentifier = "9CF72B101B8F073400238B9A"
                BuildableName = "DKImagePickerControllerDemoTests.xctest"
                BlueprintName = "DKImagePickerControllerDemoTests"
-               ReferencedContainer = "container:DKImagePickerControllerDemo.xcodeproj">
+               ReferencedContainer = "container:        .xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -59,7 +59,7 @@
                BlueprintIdentifier = "B9EFB96B1D20FB7D006CDCAA"
                BuildableName = "DKImagePickerControllerTests.xctest"
                BlueprintName = "DKImagePickerControllerTests"
-               ReferencedContainer = "container:DKImagePickerControllerDemo.xcodeproj">
+               ReferencedContainer = "container:        .xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -69,7 +69,7 @@
             BlueprintIdentifier = "9C35CBFE19DBB00700557269"
             BuildableName = "DKImagePickerControllerDemo.app"
             BlueprintName = "DKImagePickerControllerDemo"
-            ReferencedContainer = "container:DKImagePickerControllerDemo.xcodeproj">
+            ReferencedContainer = "container:        .xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -92,7 +92,7 @@
             BlueprintIdentifier = "9C35CBFE19DBB00700557269"
             BuildableName = "DKImagePickerControllerDemo.app"
             BlueprintName = "DKImagePickerControllerDemo"
-            ReferencedContainer = "container:DKImagePickerControllerDemo.xcodeproj">
+            ReferencedContainer = "container:        .xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -111,7 +111,7 @@
             BlueprintIdentifier = "9C35CBFE19DBB00700557269"
             BuildableName = "DKImagePickerControllerDemo.app"
             BlueprintName = "DKImagePickerControllerDemo"
-            ReferencedContainer = "container:DKImagePickerControllerDemo.xcodeproj">
+            ReferencedContainer = "container:        .xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
