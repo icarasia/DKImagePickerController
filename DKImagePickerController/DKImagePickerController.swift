@@ -112,7 +112,7 @@ public enum DKImagePickerControllerSourceType : Int {
 /**
  * The `DKImagePickerController` class offers the all public APIs which will affect the UI.
  */
-@objc public class DKImagePickerController : UINavigationController {
+@objc open class DKImagePickerController : UINavigationController {
     
     lazy public var UIDelegate: DKImagePickerControllerUIDelegate = {
         return DKImagePickerControllerDefaultUIDelegate()
@@ -445,7 +445,7 @@ public enum DKImagePickerControllerSourceType : Int {
         }
     }
     
-    @objc public func dismissMe() {
+    @objc open func dismissMe() {
         self.presentingViewController?.dismiss(animated: true, completion: {
             self.didCancel?()
         })
