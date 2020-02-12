@@ -43,7 +43,7 @@ open class CustomUIDelegate: DKImagePickerControllerDefaultUIDelegate {
                                                showsCancelButtonForVC vc: UIViewController) {
         vc.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel,
                                                                target: imagePickerController,
-                                                               action: #selector(imagePickerController.dismiss as (Void) -> Void))
+                                                               action: #selector(imagePickerController.dismissMe))
     }
     
     override open func imagePickerController(_ imagePickerController: DKImagePickerController,

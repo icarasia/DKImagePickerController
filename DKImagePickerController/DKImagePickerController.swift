@@ -112,7 +112,7 @@ public enum DKImagePickerControllerSourceType : Int {
 /**
  * The `DKImagePickerController` class offers the all public APIs which will affect the UI.
  */
-open class DKImagePickerController : UINavigationController {
+@objc public class DKImagePickerController : UINavigationController {
     
     lazy public var UIDelegate: DKImagePickerControllerUIDelegate = {
         return DKImagePickerControllerDefaultUIDelegate()
@@ -365,7 +365,7 @@ open class DKImagePickerController : UINavigationController {
         let didCancel = { [unowned self] () in
             if self.sourceType == .camera {
                 self.dismissCamera()
-                self.dismiss()
+                self.dismissMe()
             } else {
                 self.dismissCamera()
             }
@@ -445,13 +445,13 @@ open class DKImagePickerController : UINavigationController {
         }
     }
     
-    open func dismiss() {
+    @objc public func dismissMe() {
         self.presentingViewController?.dismiss(animated: true, completion: {
             self.didCancel?()
         })
     }
     
-    open func done() {
+    @objc open func done() {
         if self.selectedAssets.count > 0 {
             self.presentingViewController?.dismiss(animated: true, completion: {
                 self.didSelectAssets?(self.selectedAssets)
@@ -487,7 +487,7 @@ open class DKImagePickerController : UINavigationController {
         
         var imageData = data
         if let image = image {
-            imageData = UIImageJPEGRepresentation(image, 1)!
+            imageData = image.jpegData(compressionQuality: 1)!
         }
         
         if #available(iOS 9.0, *) {
